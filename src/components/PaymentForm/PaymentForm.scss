@@ -1,0 +1,83 @@
+@import "../../scss/main.scss";
+
+.formContainer {
+    background-color: $color-white;
+    border: 0.1rem solid $color-beige;
+    box-sizing: border-box;
+    border-radius: 0.6rem;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 1rem;
+    padding: 3rem 2.4rem 5.8rem 2.4rem;
+    width: 100%;
+    h3 {
+        color: $color-gray-2;
+        margin-top: 0.4rem;
+    }
+    &__inputContainer {
+        width: 100%;
+        display: flex;
+        margin-bottom: 3rem;
+        margin-top: 1.6rem;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-wrap: wrap;
+    }
+
+    &__cardContainer {
+        width: 100%;
+        height: 20.2rem;
+        border: 0.1rem solid $color-white-2;
+        box-sizing: border-box;
+        border-radius: 0.6rem;
+        margin-top: 1.6rem;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 3.1rem;
+    }
+
+    &__cardHeader {
+        height: 5.4rem;
+        display: flex;
+        align-items: center;
+        box-sizing: border-box;
+        padding-left: 1.6rem;
+        border-bottom: 0.1rem solid $color-white-2;
+        h2 {
+            font-weight: 400;
+        }
+    }
+
+    &__cardDetails {
+        width: 100%;
+        height: 14.6rem;
+        background-color: $color-gray-3;
+        display: flex;
+        flex-wrap: wrap;
+        box-sizing: border-box;
+        padding: 1.7rem 1.5rem 1.7rem 1.5rem;
+        align-content: space-between;
+    }
+
+    button {
+        height: 5.6rem;
+        background-color: $color-green;
+        width: 100%;
+        color: $color-white;
+        font-family: $font-family-primary;
+        font-size: $font-size-primary;
+        font-weight: normal;
+        text-transform: uppercase;
+        box-shadow: 0rem 0.4rem 1rem rgba(67, 40, 16, 0.24);
+        border-radius: 0.3rem;
+        border: none;
+        cursor: pointer;
+        transition: 0.2s ease-in-out;
+        &:hover {
+            background-color: $color-green-active;
+            transform: translateY(0.2rem);
+            transition: 0.2s ease-in-out;
+        }
+    }
+}

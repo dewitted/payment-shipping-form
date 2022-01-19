@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap');
+
+$font-size-1: 1.4rem;
+$font-size-2: 1.2rem;
+$font-size-3: 1.8rem;
+$font-size-4: 2.4rem;
+
+$font-size-primary: $font-size-1;
+$font-size-secondary: $font-size-2;
+
+$sofia-pro: 'Sofia Pro', sans-serif;
+$work-sans: 'Work Sans', sans-serif;
+
+$font-family-primary: $sofia-pro;
+$font-family-secondary: $work-sans;
+
+h1 {
+    font-size: $font-size-primary;
+    font-family: $font-family-primary;
+    line-height: 2.4rem;
+}
+
+h2 {
+    font-size: $font-size-primary;
+    font-family: $font-family-secondary;
+    line-height: 1.96rem;
+    font-weight: 600;
+}
+
+h3 {
+    font-size: $font-size-secondary;
+    font-family: $font-family-primary;
+    line-height: 1.6rem;
+    font-weight: 400;
+}
+
