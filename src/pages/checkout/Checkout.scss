@@ -2,7 +2,6 @@
 
 .container {
     display: flex;
-    height: 100vh;
     width: 100%;
     h1 {
         color: $color-gray-1;
@@ -17,6 +16,8 @@
     &__containerSummary {
         background-color: $color-white;
         width: 595px;
+        box-sizing: border-box;
+        padding: 8.8rem 15rem 0rem 7.1rem;
     }
 }
 

@@ -13,6 +13,14 @@ body {
     background-color: $background-color-default;
 }
 
-h1,h2,h3,p {
+h1,h2,h3,h4,h5,h6,p {
     margin: 0;
+}
+
+#root{
+    position: relative;
+    min-height: 100vh;
+    #content-wrap{
+        padding-bottom: 5.4rem;
+    }
 }

@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap');
 
+$font-size-0: 1rem;
 $font-size-1: 1.4rem;
 $font-size-2: 1.2rem;
-$font-size-3: 1.8rem;
-$font-size-4: 2.4rem;
+$font-size-3: 1.6rem;
+$font-size-4: 1.8rem;
+$font-size-5: 2.4rem;
 
 $font-size-primary: $font-size-1;
 $font-size-secondary: $font-size-2;
@@ -32,5 +34,20 @@ h3 {
     font-family: $font-family-primary;
     line-height: 1.6rem;
     font-weight: 400;
+}
+
+h4 {
+    font-size: $font-size-3;
+    font-family: $font-family-primary;
+}
+
+h5 {
+    font-size: $font-size-4;
+    font-family: $font-family-primary;
+}
+
+h6 {
+    font-size: $font-size-5;
+    font-family: $font-family-primary;
 }
 

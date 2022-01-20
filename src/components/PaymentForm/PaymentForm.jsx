@@ -52,6 +52,12 @@ const PaymentForm = () => {
                 </div>
             </div>
             <button>complete order</button>
+            <section className="formContainer__securityLogoContainer">
+                <div className="logo norton"></div>
+                <div className="logo verisign"></div>
+                <div className="logo mcafee"></div>
+                <div className="logo comodo"></div>
+            </section>
         </div>
     )
 }
