@@ -1,10 +1,15 @@
-import React from 'react';
-import './input.scss'
+import React from "react";
+import "./input.scss";
 
-const Input = ({placeholder, state}) => {
-  return <>
-    <input placeholder={placeholder} className={state !== "" ? `reusableInput ${state}` :'reusableInput'}/>
-</>;
+const Input = ({ placeholder, state="" }) => {
+  return (
+    <>
+      <input
+        placeholder={placeholder}
+        className={`reusableInput ${state}`}
+      />
+    </>
+  );
 };
 
 export default Input;

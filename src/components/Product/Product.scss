@@ -1,0 +1,68 @@
+@import "../../scss/main.scss";
+
+.product {
+  height: 9.2rem;
+  width: 100%;
+  display: flex;
+  position: relative;
+  border-bottom: 0.1rem solid $color-gray-5;
+  margin-bottom: 2rem;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &:hover{
+    .product__remove {
+        visibility: visible;
+    }
+  }
+  &__remove {
+    visibility: hidden;
+    position: absolute;
+    left: 11.6rem;
+    top: 5.2rem;
+    color: $color-orange;
+    font-size: $font-size-0;
+    font-family: $font-family-primary;
+    user-select: none;
+    cursor: pointer;
+    &::before {
+      content: "";
+      width: 0.5rem;
+      height: 0.5rem;
+      background-image: url("../../images/xmark.svg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: -0.7rem;
+      top: 0.4rem;
+      cursor: pointer;
+    }
+  }
+  &__productImage {
+    width: 7.2rem;
+    height: 7.2rem;
+    background-color: $color-rosegold;
+  }
+  &__productDetails {
+    height: 7.2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 3.2rem;
+  }
+  &__productName {
+    width: 100%;
+    display: flex;
+    font-size: $font-size-3;
+    font-family: $font-family-primary;
+    font-weight: 600;
+    user-select: none;
+    h4 {
+      font-weight: 400;
+      user-select: none;
+    }
+  }
+}

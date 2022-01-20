@@ -1,79 +1,77 @@
 @import "../../scss/main.scss";
 
 .wrapper {
+  position: relative;
+
+  .selectContainer {
+    box-sizing: border-box;
+    border: 0.1rem solid $color-gray-5;
+    border-radius: 0.2rem;
+    height: 4.8rem;
+    width: 20.2rem;
+    margin-top: 1.6rem;
+    padding: 2rem 1.2rem 0.4rem 1.2rem;
     position: relative;
+    cursor: pointer;
 
-    .selectContainer {
-        box-sizing: border-box;
-        border: 0.1rem solid $color-gray-5;
-        border-radius: 0.2rem;
-        height: 4.8rem;
-        margin-top: 1.6rem;
-        padding: 2rem 1.2rem 0.4rem 1.2rem;
-        width: 20.2rem;
-        position: relative;
-        cursor: pointer;
-
-        h1 {
-            color: $color-gray-2;
-            font-weight: 400;
-            user-select: none;
-        }
-        &__label {
-            position: absolute;
-            top: 0.1rem;
-            h3 {
-                color: $color-gray-4;
-                user-select: none;
-            }
-        }
-        &__arrow {
-            background-image: url("../../../public/dropdownArrow.svg");
-            background-size: contain;
-            background-repeat: no-repeat;
-            width: 1.5rem;
-            height: 0.7rem;
-            position: absolute;
-            right: 1.2rem;
-            transition: all 0.1s linear;
-        }
-
-        .rotated {
-            transition: all 0.1s linear;
-            transform: rotate(180deg) translateX(0.5rem);
-        }
-
-
+    h1 {
+      color: $color-gray-2;
+      font-weight: 400;
+      user-select: none;
     }
-    .optionsContainer {
-        width: 20.2rem;
-        height: 19.2rem;
-        position: absolute;
-        left: 0;
-        top: 7.3rem;
-        overflow-y: scroll;
-        display: flex;
-        flex-direction: column;
-        box-sizing: border-box;
-        padding: 1.2rem 1.2rem 1.2rem 1.2rem;
-        border: 0.1rem solid $color-gray-5;
-        border-radius: 0.2rem;
-        background-color: $color-white;
-        &__options {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            height: 4.8rem;
-            border-bottom: 0.1rem solid $color-gray-5;
-            h1 {
-                color: $color-gray-1;
-                font-weight: 400;
-                user-select: none;
-            }
-        }
+    &__label {
+      position: absolute;
+      top: 0.1rem;
+      h3 {
+        color: $color-gray-4;
+        user-select: none;
+      }
+    }
+    &__arrow {
+      background-image: url("../../../public/dropdownArrow.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 1.5rem;
+      height: 0.7rem;
+      position: absolute;
+      right: 1.2rem;
+      transition: all 0.1s linear;
     }
 
-    .hidden {
-        display: none;
+    .rotated {
+      transition: all 0.1s linear;
+      transform: rotate(180deg) translateX(0.5rem);
     }
+  }
+  .optionsContainer {
+    width: 20.2rem;
+    height: 19.2rem;
+    position: absolute;
+    left: 0;
+    top: 7.3rem;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 1.2rem 1.2rem 1.2rem 1.2rem;
+    border: 0.1rem solid $color-gray-5;
+    border-radius: 0.2rem;
+    background-color: $color-white;
+    &__options {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 4.8rem;
+      border-bottom: 0.1rem solid $color-gray-5;
+      h1 {
+        color: $color-gray-1;
+        font-weight: 400;
+        user-select: none;
+      }
+    }
+  }
+
+  .hidden {
+    display: none;
+  }
 }
