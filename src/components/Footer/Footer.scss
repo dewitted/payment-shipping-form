@@ -2,7 +2,7 @@
 
 .footer {
     width: 100%;
-    height: 5.4rem;
+    min-height: 5.4rem;
     background-color: $color-orange;
     position: absolute;
     bottom: 0;
@@ -19,6 +19,7 @@
         background-position: center;
         background-repeat: no-repeat;
         margin-right: 2.9rem;
+        cursor: pointer;
     }
     ul {
         list-style: none;
@@ -27,12 +28,13 @@
         padding: 0;
         li {
             margin-right: 3.2rem;
-            font-size: $font-family-secondary;
+            font-size: $font-size-secondary;
             font-family: $font-family-primary;
             color: $color-white;
             font-weight: 100;
             opacity: 0.6;
             letter-spacing: 0.1rem;
+            cursor: pointer;
             &:last-child{
                 margin-right: 0;
             }
@@ -48,3 +50,30 @@
        letter-spacing: 0.1rem;
    }
 }
+
+@media (max-width: $breakpoint-HD) {
+    .footer {
+        padding: 1.5rem 2.5rem 1.6rem 2.5rem;
+        flex-direction: column;
+        &__icon {
+            width: 18.3rem;
+            height: 3.9rem;
+            margin-right: 0rem;
+            margin-bottom: 2.5rem;
+        }
+        ul {
+            margin-bottom: 2.5rem; 
+
+            li {
+                margin-right: 1.3rem;
+                
+                &:last-child{
+                    margin-right: 0;
+                }
+            }
+       }
+       span{
+           margin-left: 0;
+       }
+    }
+  }

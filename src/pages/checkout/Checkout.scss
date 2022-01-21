@@ -1,23 +1,150 @@
-@import '../../scss/main.scss';
+@import "../../scss/main.scss";
 
 .container {
+  display: flex;
+  width: 100%;
+
+  h1 {
+    color: $color-gray-1;
+  }
+  &__containerForm {
+    box-sizing: border-box;
     display: flex;
+    flex-direction: column;
+    padding: 5.172rem 5.5rem 5rem 15.1rem;
+    width: 84.5rem;
+  }
+  &__containerSummary {
+    background-color: $color-white;
+    width: 59.5rem;
+    box-sizing: border-box;
+    padding: 8.8rem 15rem 0rem 7.1rem;
+  }
+  &__headerSummary {
+    display: none;
+  }
+
+  &__responsiveSummary {
+    display: none;
+    position: absolute;
+    top: 5rem;
+    left: 0;
+    background-color: $color-white;
     width: 100%;
-    h1 {
-        color: $color-gray-1;
+    box-sizing: border-box;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    //   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+  }
+}
+
+@media (min-width: $breakpoint-HD) {
+  .container {
+      &__containerForm {
+        width: 60%;
+      }
+      &__containerSummary {
+        width: 40%;
+        height: 100vh;
+
+        padding: 8.8rem 5.1rem 0rem 5.1rem;
+      }
     }
+}
+
+@media (max-width: 1439px) {
+  .container {
+
+      &__containerForm {
+        width: 60%;
+        padding: 5.172rem 5rem 5rem 5rem;
+      }
+      &__containerSummary {
+        width: 40%;
+        padding: 8.8rem 5.1rem 0rem 5.1rem;
+      }
+    }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .container {
+    justify-content: space-between;
+    position: relative;
     &__containerForm {
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        padding: 5.172rem 5.5rem 5rem 15.1rem;
-        width: 845px;
+      padding: 8.9rem 1.5rem 5rem 1.5rem;
+      width: 100%;
     }
     &__containerSummary {
-        background-color: $color-white;
-        width: 595px;
-        box-sizing: border-box;
-        padding: 8.8rem 15rem 0rem 7.1rem;
+      display: none;
     }
+    &__headerSummary {
+      position: relative;
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      height: 5rem;
+      width: 100%;
+      background-color: $color-white;
+      box-sizing: border-box;
+      padding-left: 1.5rem;
+      padding-right: 1.7rem;
+      border-bottom: 0.1rem solid $color-gray-5;
+      h1 {
+      }
+    }
+
+    &__shoppingCart {
+      background-image: url("../../images/ShoppingCart.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 1.6rem;
+      height: 1.6rem;
+      margin-right: 1rem;
+    }
+
+    &__dropdown {
+      h1 {
+        text-transform: uppercase;
+      }
+    }
+
+    &__arrow {
+      background-image: url("../../../public/dropdownArrow.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 1.5rem;
+      height: 0.7rem;
+      position: absolute;
+      left: 17.3rem;
+      top: 2.5rem;
+      transform: rotate(270deg) translateX(0.5rem);
+      transition: all 0.1s linear;
+    }
+    .rotated {
+      transition: all 0.1s linear;
+      transform: rotate(360deg) translateX(0.5rem) translateY(-0.3rem);
+    }
+
+    &__total {
+      margin-left: auto;
+    }
+
+    &__responsiveSummary {
+      display: none;
+      position: absolute;
+      top: 5rem;
+      left: 0;
+      background-color: $color-white;
+      width: 100%;
+      box-sizing: border-box;
+      padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+      //   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    }
+
+    .visible {
+      display: flex;
+      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+    }
+  }
 }
 

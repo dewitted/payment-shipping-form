@@ -24,3 +24,12 @@ h1,h2,h3,h4,h5,h6,p {
         padding-bottom: 5.4rem;
     }
 }
+
+@media (max-width: $breakpoint-HD) {
+    #root{
+        #content-wrap{
+            height: 100%;
+            padding-bottom: 14.4rem;
+        }
+    }
+}

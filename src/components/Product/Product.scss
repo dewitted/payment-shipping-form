@@ -66,3 +66,11 @@
     }
   }
 }
+
+@media (max-width: $breakpoint-HD) {
+  .product {
+    &__productDetails {
+      padding-left: 2rem;
+    }
+  }
+}

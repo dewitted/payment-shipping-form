@@ -23,7 +23,7 @@ const itemObject = [
   },
 ];
 
-const Summary = () => {
+const Summary = ({setTotalAmount}) => {
   const [itemData, setItemData] = useState(itemObject);
 
   const products = itemData.map((item, index) => (
@@ -44,7 +44,14 @@ const Summary = () => {
   // let formattedValue = (Math.round(value * 100) / 100).toFixed(2)
 
   const total = itemData.reduce((a, b) => b.itemPrice * b.itemCount + a, 0);
-  let formattedTotal = (Math.round(total * 100) / 100).toFixed(2);
+  const formattedTotal = (Math.round(total * 100) / 100).toFixed(2);
+
+  useEffect(() => {
+    
+  setTotalAmount(formattedTotal)
+
+  }, [formattedTotal]);
+  
 
   return (
     <div className="summaryWrapper">

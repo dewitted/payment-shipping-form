@@ -75,3 +75,78 @@
     display: none;
   }
 }
+
+@media (min-width: $breakpoint-HD) {
+  .wrapper {
+    position: relative;
+    width: 32%;
+    .selectContainer {
+      border-radius: 0.2rem;
+      height: 4.8rem;
+      width: 100%;
+      margin-top: 1.6rem;
+      padding: 2rem 1.2rem 0.4rem 1.2rem;
+    }
+    .optionsContainer {
+      width: 100%;
+      height: 19.2rem;
+      left: 0;
+      top: 7.3rem;
+      &__options {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 4.8rem;
+        border-bottom: 0.1rem solid $color-gray-5;
+        h1 {
+          color: $color-gray-1;
+          font-weight: 400;
+          user-select: none;
+        }
+      }
+    }
+  
+    .hidden {
+      display: none;
+    }
+  }
+
+}
+
+
+@media (max-width: $breakpoint-HD) {
+  .wrapper {
+    width: 100%;
+
+    .selectContainer {
+      width: 100%;
+      margin-top: 0rem;
+      margin-bottom: 1.6rem;
+    }
+    .optionsContainer {
+      width: 100%;
+      height: 19.2rem;
+      left: 0;
+      top: 6rem;
+      z-index: 5;
+      box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+      &__options {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 4.8rem;
+        border-bottom: 0.1rem solid $color-gray-5;
+        
+        h1 {
+          color: $color-gray-1;
+          font-weight: 400;
+          user-select: none;
+        }
+      }
+    }
+  
+    .hidden {
+      display: none;
+    }
+  }
+}

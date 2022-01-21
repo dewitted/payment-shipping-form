@@ -2,16 +2,10 @@ import React from "react";
 import Input from "../input/Input";
 import Select from "../select/Select";
 import { optionsCountries } from "../../constants/countries";
+import { optionsState} from '../../constants/states'
 import "./PaymentForm.scss";
 
-//Hardcoded variant for only one of the countries, did not expand the Region/State functionality due to time constraints.
-const optionsState = [
-  { label: "Vilniaus r." },
-  { label: "Kauno r." },
-  { label: "Klaipedos r." },
-  { label: "Ukmerges r." },
-  { label: "Telsiu r." },
-];
+//Hardcoded Region/State variant for only one of the countries (lithuania), did not expand the Region/State functionality due to time constraints.
 
 const PaymentForm = () => {
   return (
@@ -20,7 +14,7 @@ const PaymentForm = () => {
       <h3>Fields marked as (*) are required.</h3>
       <div className="formContainer__inputContainer">
         <Input placeholder="First name*" />
-        <Input placeholder="Last name*" />  
+        <Input placeholder="Last name*" />
       </div>
       <h2>Shipping Address</h2>
       <div className="formContainer__inputContainer">
@@ -36,8 +30,10 @@ const PaymentForm = () => {
         </div>
         <div className="formContainer__cardDetails">
           <Input placeholder="Card number" state="wide" />
-          <Input placeholder="MM/YY" state="mini" />
-          <Input placeholder="CVV" state="mini" />
+          <div className="formContainer__inputWrapper">
+            <Input placeholder="MM/YY" state="mini" />
+            <Input placeholder="CVV" state="mini" />
+          </div>
         </div>
       </div>
       <button>complete order</button>

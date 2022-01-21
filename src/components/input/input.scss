@@ -28,3 +28,31 @@
     width: 11.2rem;
     margin-right: 1.6rem;
 }
+
+@media (max-width: $breakpoint-HD) {
+    .reusableInput {
+        width: 100%;
+        margin-bottom: 1.6rem;
+    }
+    .mini {
+        width: 48%;
+        margin-right: 0rem;
+    }
+}
+
+@media (min-width: $breakpoint-HD) {
+    .reusableInput {
+        width: 49%;
+        margin-bottom: 0rem;
+    }
+    .mini {
+        width: 48%;
+        margin-right: 0rem;
+    }
+    .wide {
+        width: 100%;
+    }
+    .thin {
+        width: 32%;
+    }
+}
